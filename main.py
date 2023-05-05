@@ -37,6 +37,10 @@ class Cafe(db.Model):
 @app.route("/")
 def home():
     return render_template("index.html")
+
+@app.route('/random', methods=['GET'])
+def random():
+    return render_template('random.html')
     
 
 ## HTTP GET - Read Record
